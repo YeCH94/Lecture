@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com"
+           xmlns="http://www.example.com"
+           elementFormDefault="qualified">
+
+    <!-- Simple Element Definition -->
+
+
+    <!-- Attribute Definition -->
+
+
+    <xs:element name="NewsPaper" type="xs:ENTITY"/>
+
+    <!-- Complex Element Definition -->
+    <xs:complexType name="artiType">
+        <xs:sequence>
+            <xs:element name="HEADLINE" type="xs:string"/>
+            <xs:element name="BYLINE" type="xs:string"/>
+            <xs:element name="LEAD" type="xs:string"/>
+            <xs:element name="BODY" type="xs:string"/>
+            <xs:element name="NOTES" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="newsType">
+        <xs:sequence>
+            <xs:element name="ARTICLE" type="artiType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="AUTHOR" type="xs:string" use="required"/>
+        <xs:attribute name="EDITOR" type="xs:string"/>
+        <xs:attribute name="DATE" type="xs:string"/>
+        <xs:attribute name="EDITION" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:element name="NEWSPAPER" type="newsType"/>
+
+</xs:schema>

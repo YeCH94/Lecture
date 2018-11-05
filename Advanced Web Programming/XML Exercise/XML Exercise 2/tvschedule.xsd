@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com"
+           xmlns="http://www.example.com"
+           elementFormDefault="qualified">
+
+    <!-- Simple Element Definition -->
+
+
+    <!-- Attribute Definition -->
+
+
+    <!-- Complex Element Definition -->
+    <xs:complexType name="titleType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="RATING" type="xs:string"/>
+                <xs:attribute name="LANGUAGE" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="progType">
+        <xs:sequence>
+            <xs:element name="TIME" type="xs:string"/>
+            <xs:element name="TITLE" type="titleType"/>
+            <xs:element name="DESCRIPTION" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="VTR" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="dayType">
+        <xs:sequence>
+            <xs:element name="DATE"/>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="HOLIDAY" type="xs:string"/>
+                <xs:element name="PROGRAMSLOT" type="progType" maxOccurs="unbounded"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="chanType">
+        <xs:sequence>
+            <xs:element name="BANNER" type="xs:string"/>
+            <xs:element name="DAY" type="dayType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="CHAN" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="scheType">
+        <xs:sequence>
+            <xs:element name="CHANNEL" type="chanType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="NAME" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="TVSCHEDULE" type="scheType"/>
+
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TVSCHEDULE xmlns="http://www.example.com"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.example.com tvschedule.xsd"
+            NAME="TVSchedule">
+    <CHANNEL CHAN="Sports">
+        <BANNER>DrinkWater</BANNER>
+        <DAY>
+            <DATE>2018.09.13</DATE>
+            <HOLIDAY>Holiday</HOLIDAY>
+            <PROGRAMSLOT>
+                <TIME>17:00</TIME>
+                <TITLE>Basketball</TITLE>
+            </PROGRAMSLOT>
+        </DAY>
+        <DAY>
+            <DATE>2018.09.14</DATE>
+            <PROGRAMSLOT VTR="YES">
+                <TIME>20:00</TIME>
+                <TITLE RATING="ALL" LANGUAGE="KOREAN">Soccer</TITLE>
+            </PROGRAMSLOT>
+        </DAY>
+    </CHANNEL>
+</TVSCHEDULE>

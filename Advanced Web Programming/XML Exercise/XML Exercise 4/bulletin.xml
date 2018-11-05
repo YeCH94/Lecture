@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BOARD xmlns="http://www.example.com"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.example.com bulletin.xsd">
+    <NAME>Exercise</NAME>
+    <ARTICLE>
+        <TITLE>Article</TITLE>
+        <MESSAGE>This is article</MESSAGE>
+        <WRITER_ID>201333471</WRITER_ID>
+        <WRITER_NAME>Ye Chan-Ho</WRITER_NAME>
+        <REPLY>
+            <MESSAGE>Reply 1</MESSAGE>
+            <WRITER_ID>201300000</WRITER_ID>
+            <WRITER_NAME>Hong Gil-dong</WRITER_NAME>
+        </REPLY>
+        <REPLY>
+            <MESSAGE>Reply 2</MESSAGE>
+            <WRITER_ID>201300000</WRITER_ID>
+            <WRITER_NAME>Hong Gil-dong</WRITER_NAME>
+        </REPLY>
+    </ARTICLE>
+</BOARD>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE NEWSPAPER [
+        <!ENTITY NEWSPAPER "Vervet Logic Times">
+        <!ENTITY PUBLISHER "Vervet Logic Press">
+        <!ENTITY COPYRIGHT "Copyright 1998 Vervet Logic Press">
+        ]>
+<NEWSPAPER xmlns="http://www.example.com"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.example.com newspaper.xsd"
+           AUTHOR="Ye Chan-Ho"
+           DATE="2018.09.13">
+    <ARTICLE>
+        <HEADLINE>Exercise!!</HEADLINE>
+        <BYLINE>&PUBLISHER;</BYLINE>
+        <LEAD>&NEWSPAPER;</LEAD>
+        <BODY>This is Advanced Web Programming Exercise.</BODY>
+        <NOTES>&COPYRIGHT;</NOTES>
+    </ARTICLE>
+</NEWSPAPER>

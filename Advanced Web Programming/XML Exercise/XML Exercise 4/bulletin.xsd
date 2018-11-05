@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com"
+           xmlns="http://www.example.com"
+           elementFormDefault="qualified">
+
+    <!-- Simple Element Definition -->
+    <xs:element name="MESSAGE" type="xs:string"/>
+    <xs:element name="WRITER_ID" type="xs:string"/>
+    <xs:element name="WRITER_NAME" type="xs:string"/>
+
+    <!-- Attribute Definition -->
+
+
+    <!-- Complex Element Definition -->
+    <xs:complexType name="replyType">
+        <xs:sequence>
+            <xs:element ref="MESSAGE"/>
+            <xs:element ref="WRITER_ID"/>
+            <xs:element ref="WRITER_NAME"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="artiType">
+        <xs:sequence>
+            <xs:element name="TITLE" type="xs:string"/>
+            <xs:element ref="MESSAGE"/>
+            <xs:element ref="WRITER_ID"/>
+            <xs:element ref="WRITER_NAME"/>
+            <xs:element name="REPLY" type="replyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="boardType">
+        <xs:sequence>
+            <xs:element name="NAME" type="xs:string"/>
+            <xs:element name="ARTICLE" type="artiType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="BOARD" type="boardType"/>
+
+</xs:schema>

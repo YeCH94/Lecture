@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE BOARD SYSTEM "bulletin.dtd">
+<BOARD>
+    <NAME>Bulletin</NAME>
+    <ARTICLE>
+        <TITLE>Article</TITLE>
+        <MESSAGE>This is article</MESSAGE>
+        <WRITER_ID>201333471</WRITER_ID>
+        <WRITER_NAME>Ye Chan-ho</WRITER_NAME>
+        <REPLY>
+            <MESSAGE>Reply 1</MESSAGE>
+            <WRITER_ID>201300000</WRITER_ID>
+            <WRITER_NAME>Hong Gil-dong</WRITER_NAME>
+        </REPLY>
+        <REPLY>
+            <MESSAGE>Reply 2</MESSAGE>
+            <WRITER_ID>201300000</WRITER_ID>
+            <WRITER_NAME>Hong Gil-dong</WRITER_NAME>
+        </REPLY>
+    </ARTICLE>
+</BOARD>
