@@ -265,7 +265,7 @@
 
   - 데이터 타입
 
-![img](file:///C:/Users/CH/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+    ![Data Type](https://github.com/YeCH94/Lecture/blob/master/Advanced%20Web%20Programming/XML/img/img1.png)
 
 - Attribute
 
